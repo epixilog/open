@@ -1,0 +1,7 @@
+oc_plateform_homepage:
+    path:     /
+    defaults: { _controller: OCPlateformBundle:Advert:index }
+
+oc_plateform_helloword:
+    path:     /hello/{who}
+    defaults: { _controller: OCPlateformBundle:Advert:hello, who: 'world'}
