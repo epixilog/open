@@ -2,6 +2,19 @@ oc_plateform_homepage:
     path:     /
     defaults: { _controller: OCPlateformBundle:Advert:index }
 
-oc_plateform_helloword:
-    path:     /hello/{who}
-    defaults: { _controller: OCPlateformBundle:Advert:hello, who: 'world'}
+oc_plateform_view:
+    path:     /advert/{id}
+    defaults: { _controller: OCPlateformBundle:Advert:view, id: 0}
+    requirements: 
+      id: \d
+
+oc_plateform_view_slug:
+    path:     /advert/{year}-{slug}.{_format}
+    defaults: { _controller: OCPlateformBundle:Advert:viewSlug}
+    requirements:
+      year: \d{4}
+      _format: html|xml|pdf
+
+oc_plateform_add:
+    path:     /advert/add
+    defaults: { _controller: OCPlateformBundle:Advert:add}

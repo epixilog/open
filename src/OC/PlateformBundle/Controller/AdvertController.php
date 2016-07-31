@@ -11,8 +11,19 @@ class AdvertController extends Controller
         return $this->render('OCPlateformBundle:Default:index.html.twig');
     }
 
-    public function helloAction($who)
+
+    public function viewAction($id)
+    {	
+    	var_dump($id); die();
+    }
+
+    public function viewSlugAction($year,$slug,$_format)
+    {	
+    	var_dump($year.'-'.$slug.'-'.$_format);
+    }
+
+    public function add()
     {
-    	return $this->render('OCPlateformBundle:Default:hello.html.twig',array('who'=>$who));
+    	
     }
 }
