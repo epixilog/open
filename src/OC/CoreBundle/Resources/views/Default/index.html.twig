@@ -1,0 +1,17 @@
+{% extends "OCCoreBundle:Default:layout.html.twig" %}
+
+{% block title %}
+  Page d'acceuil - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+	
+	<h1>Notre page d'accueil</h1>
+
+	{% for flash_message in app.session.flashBag.get('notice') %}
+	    <div class="panel panel-primary">
+	        {{ flash_message }}
+	    </div>
+	{% endfor %}
+
+{% endblock %}

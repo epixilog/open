@@ -1,0 +1,24 @@
+{% extends "OCPlateformBundle::layout.html.twig" %}
+
+{% block title %}
+  Ajouter une annonce - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Ajouter une annonce</h2>
+
+  {{ include("OCPlateformBundle:Advert:form.html.twig") }}
+
+  <p>
+    Vous ajoutez une nouvelle annonce, libez à vous de mettre les information qui vous conviennent.
+  </p>
+
+  <p>
+    <a href="{{ path('oc_platform_home') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-list"></i>
+      Voir toutes les annonces
+    </a>
+  </p>
+
+{% endblock %}

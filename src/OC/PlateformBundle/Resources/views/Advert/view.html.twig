@@ -6,11 +6,14 @@
 
 {% block ocplatform_body %}
 
-  <h2>{{ advert.title }}</h2>
+  <h2>
+      <img src="{{ advert.image.url }}" alt="{{ advert.image.alt }}" width="128" height="128" /> 
+      {{ advert.title }}
+  </h2>
   <i>Par {{ advert.author }}, le {{ advert.date|date('d/m/Y') }}</i>
 
   <div class="well">
-    {{ advert.description }}
+    {{ advert.content }}
   </div>
 
   <p>
